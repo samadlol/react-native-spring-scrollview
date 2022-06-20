@@ -231,8 +231,8 @@ export class SpringScrollView extends React.PureComponent<SpringScrollViewPropTy
   }
 
   componentWillUnmount() {
-    this._keyboardShowSub.remove();
-    this._keyboardHideSub.remove();
+    this._keyboardShowSub && this._keyboardShowSub.remove();
+    this._keyboardHideSub && this._keyboardHideSub.remove();
   }
 
   scrollTo(offset: Offset, animated: boolean = true) {
